@@ -9,66 +9,76 @@ header:
   actions:
     - label: "시작하기"
       url: "#overview"
-excerpt: "<h1 style='font-size: 2.5em; font-weight: 700; margin-bottom: 1rem;'>재난 상황에서 생명을 지키는 AI 기반 실시간 대응 시스템</h1>"
+excerpt: "재난 상황에서 생명을 지키는 AI 기반 실시간 대응 시스템"
 intro:
-  - excerpt: '<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);"><p style="font-size: 1.6em; line-height: 1.8; color: #ffffff; margin: 0; font-weight: 500;">**SENSE**는 다양한 데이터 소스를 통합하고 멀티 에이전트 오케스트레이션을 통해 재난 상황에서 최적의 의사결정을 지원합니다.</p></div>'
+  - excerpt: '**SENSE**는 다양한 데이터 소스를 통합하고 멀티 에이전트 오케스트레이션을 통해 재난 상황에서 최적의 의사결정을 지원합니다.'
 feature_row:
   - title: "지능형 아키텍처"
     excerpt: "분산된 데이터를 실시간으로 통합하고 분석하는 모듈식 구조"
     url: "#architecture"
     btn_label: "자세히 보기"
-    btn_class: "btn--primary"
+    btn_class: "btn--primary btn--large"
   - title: "실전 시나리오"
     excerpt: "지진, 화재, 홍수 등 다양한 재난 상황에 즉각 대응"
     url: "#scenarios"
     btn_label: "자세히 보기"
-    btn_class: "btn--primary"
+    btn_class: "btn--primary btn--large"
   - title: "왜 SENSE가 필요한가"
     excerpt: "기존 시스템의 한계와 SENSE의 해결책"
     url: "/necessity/"
     btn_label: "자세히 보기"
-    btn_class: "btn--primary"
+    btn_class: "btn--primary btn--large"
   - title: "만들게 된 계기"
     excerpt: "현 재난문자 시스템의 한계와 개선 방향"
     url: "/motivation/"
     btn_label: "자세히 보기"
-    btn_class: "btn--primary"
+    btn_class: "btn--primary btn--large"
 ---
 
 <style>
-.author__avatar {
-  display: none !important;
-}
-
+.author__avatar,
 .sidebar {
   display: none !important;
 }
 
 .page__hero {
-  padding: 6rem 0;
-  text-align: center;
+  padding: 6rem 0 4rem;
 }
 
-.page__hero-caption {
-  font-size: 1.8em;
-  line-height: 1.6;
-  max-width: 900px;
-  margin: 0 auto;
+.page__lead {
+  font-size: 1.6em;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.intro {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 3.5rem 3rem;
+  margin: 3rem 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.intro .archive__item-excerpt {
+  font-size: 1.5em !important;
+  line-height: 1.9 !important;
+  color: #ffffff !important;
+  font-weight: 500;
 }
 
 .feature__wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 2rem;
 }
 
 .feature__item {
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-  padding: 3.5rem 3rem;
-  margin-bottom: 3rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 3.5rem 3rem !important;
+  margin-bottom: 2.5rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid transparent;
 }
 
@@ -83,7 +93,7 @@ feature_row:
 }
 
 .archive__item-title {
-  font-size: 2.2em !important;
+  font-size: 2.3em !important;
   font-weight: 700 !important;
   color: #2c3e50 !important;
   margin-bottom: 1.5rem !important;
@@ -91,17 +101,17 @@ feature_row:
 }
 
 .archive__item-excerpt {
-  font-size: 1.4em !important;
+  font-size: 1.5em !important;
   line-height: 1.8 !important;
   color: #555 !important;
   margin-bottom: 2.5rem !important;
 }
 
 .btn {
-  padding: 1.2rem 3rem !important;
-  font-size: 1.3em !important;
+  padding: 1.3rem 3.5rem !important;
+  font-size: 1.35em !important;
   font-weight: 600 !important;
-  border-radius: 10px !important;
+  border-radius: 12px !important;
   transition: all 0.3s ease !important;
   text-transform: none !important;
 }
@@ -114,34 +124,37 @@ feature_row:
 
 .btn--primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4) !important;
-}
-
-.intro {
-  margin: 3rem auto !important;
-  max-width: 1000px !important;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5) !important;
 }
 
 @media (max-width: 768px) {
   .feature__item {
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 2rem !important;
   }
   
   .archive__item-title {
-    font-size: 1.8em !important;
+    font-size: 1.9em !important;
   }
   
   .archive__item-excerpt {
-    font-size: 1.2em !important;
+    font-size: 1.25em !important;
   }
   
   .btn {
-    padding: 1rem 2rem !important;
-    font-size: 1.1em !important;
+    padding: 1.1rem 2.5rem !important;
+    font-size: 1.2em !important;
+  }
+  
+  .intro {
+    padding: 2.5rem 2rem;
+  }
+  
+  .intro .archive__item-excerpt {
+    font-size: 1.3em !important;
   }
   
   .page__hero {
-    padding: 4rem 0;
+    padding: 4rem 0 3rem;
   }
 }
 </style>
