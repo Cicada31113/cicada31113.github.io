@@ -27,6 +27,13 @@ feature_row:
     url: "#scenarios"
     btn_label: "자세히 보기"
     btn_class: "btn--primary"
+  - image_path: /assets/images/necessity.png
+    alt: "필요성"
+    title: "왜 SENSE가 필요한가"
+    excerpt: "기존 시스템의 한계와 SENSE의 해결책"
+    url: "/necessity/"
+    btn_label: "자세히 보기"
+    btn_class: "btn--primary"
   - image_path: /assets/images/motivation.png
     alt: "개발 배경"
     title: "만들게 된 계기"
@@ -39,69 +46,3 @@ feature_row:
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
-
-## 프로젝트 개요 {#overview}
-
-**SENSE**(Smart Emergency Network for Sensing and Engagement)는 재난 현장의 **정보 단절**과 **의사결정 지연** 문제를 해결합니다.
-
-### 핵심 기능
-- 🔍 **실시간 데이터 통합**: 센서, CCTV, 공공데이터, 시민제보 등 다원 데이터 융합
-- 🤖 **멀티 에이전트 오케스트레이션**: AI 에이전트 간 협업으로 최적 대응 전략 도출
-- ⚡ **초단위 의사결정**: 탐지→분석→행동을 자동화하여 골든타임 확보
-- 🔗 **기관 간 협업 지원**: 소방/경찰/병원 등 대응 조직 간 실시간 조율
-
-### 기대 효과
-- ✅ 재난 대응 시간 **70% 단축**
-- ✅ 오탐/미탐률 **50% 감소**
-- ✅ 기관 간 협업 비용 **60% 절감**
-
----
-
-## 시스템 아키텍처 {#architecture}
-
-```
-┌─────────────────────────────────────────────┐
-│         Data Collection Layer               │
-│  (Sensors, CCTV, APIs, Citizen Reports)    │
-└──────────────┬──────────────────────────────┘
-               │
-┌──────────────▼──────────────────────────────┐
-│       Data Integration & Storage            │
-│   (Time-series DB, Vector Store, Cache)    │
-└──────────────┬──────────────────────────────┘
-               │
-┌──────────────▼──────────────────────────────┐
-│      Multi-Agent Orchestration              │
-│  (Analysis, Prediction, Action Planning)   │
-└──────────────┬──────────────────────────────┘
-               │
-┌──────────────▼──────────────────────────────┐
-│       Response Execution Layer              │
-│   (Alerts, Resource Dispatch, Routing)     │
-└─────────────────────────────────────────────┘
-```
-
----
-
-## 활용 시나리오 {#scenarios}
-
-### 🌍 지진 발생 시
-- **센싱**: 가속도계, USGS 피드, CCTV 분석으로 실시간 진도 파악
-- **분석**: 건물 붕괴 위험도 예측 및 피해 지역 매핑
-- **행동**: 최적 대피 경로 제공, 병원 자동 매칭, 드론 정찰 투입
-
-### 🔥 화재 발생 시
-- **센싱**: 열화상 카메라, 연기 감지 센서, 시민 신고
-- **분석**: 화재 확산 속도 예측, 대피 우선순위 결정
-- **행동**: 소방차 최적 경로 안내, 인근 주민 긴급 대피 알림
-
-### 🌊 홍수 발생 시
-- **센싱**: 수위 센서, 기상청 데이터, 위성 이미지
-- **분석**: 침수 예상 지역 시뮬레이션
-- **행동**: 저지대 주민 사전 대피, 교통 통제, 구조 자원 배치
-
----
-
-<div style="text-align: center; margin-top: 3rem;">
-  <a href="/motivation/" class="btn btn--primary btn--large">프로젝트 시작 배경 자세히 보기</a>
-</div>
