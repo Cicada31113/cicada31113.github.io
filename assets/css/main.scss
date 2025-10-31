@@ -7,3 +7,157 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Custom styles for SENSE project */
+
+/* Hero section with side image */
+.hero-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.hero-text-content {
+  flex: 1;
+  min-width: 300px;
+  
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.hero-image-content {
+  flex: 0 0 auto;
+  max-width: 45vw;
+  
+  @media (max-width: 768px) {
+    max-width: 90vw;
+  }
+}
+
+.hero-side-image {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
+  border-radius: 26px;
+  box-shadow: 0 20px 60px rgba(0, 255, 0, 0.3),
+              0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 70px rgba(0, 255, 0, 0.4),
+                0 15px 40px rgba(0, 0, 0, 0.6);
+  }
+  
+  @media (max-width: 768px) {
+    max-height: 50vh;
+    border-radius: 16px;
+  }
+}
+
+/* Feature row cards - improved spacing without images */
+.feature__wrapper {
+  .archive__item {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(0, 255, 0, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .archive__item-title {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .archive__item-excerpt {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    
+    .btn {
+      margin-top: 1rem;
+    }
+  }
+  
+  // Grid layout for cards
+  @media (min-width: 64em) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (min-width: 80em) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Page content - wider margins for detail pages */
+.page__content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 4rem;
+  
+  @media (max-width: 1024px) {
+    padding: 2rem 3rem;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  
+  ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    
+    li {
+      margin-bottom: 0.75rem;
+      line-height: 1.7;
+    }
+  }
+}
+
+/* Intro section - centered content */
+.feature__wrapper--center {
+  text-align: center;
+  margin-bottom: 4rem;
+  
+  .archive__item-excerpt {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
