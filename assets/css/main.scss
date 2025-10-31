@@ -8,156 +8,273 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-/* Custom styles for SENSE project */
+/* Custom styles for SENSE project - Optimized Layout */
 
 /* Hero section with side image */
 .hero-content-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
   
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 1rem;
   }
 }
 
 .hero-text-content {
-  flex: 1;
+  flex: 1 1 50%;
   min-width: 300px;
   
   @media (max-width: 768px) {
     text-align: center;
+    flex: 1 1 100%;
   }
 }
 
 .hero-image-content {
-  flex: 0 0 auto;
-  max-width: 45vw;
+  flex: 1 1 45%;
+  max-width: 550px;
   
   @media (max-width: 768px) {
-    max-width: 90vw;
+    max-width: 100%;
+    flex: 1 1 100%;
   }
 }
 
 .hero-side-image {
   width: 100%;
   height: auto;
-  max-height: 60vh;
+  max-height: 500px;
   object-fit: cover;
-  border-radius: 26px;
-  box-shadow: 0 20px 60px rgba(0, 255, 0, 0.3),
-              0 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 12px 36px rgba(0, 255, 0, 0.25),
+              0 6px 18px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
     transform: scale(1.02);
-    box-shadow: 0 25px 70px rgba(0, 255, 0, 0.4),
-                0 15px 40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 16px 48px rgba(0, 255, 0, 0.35),
+                0 8px 24px rgba(0, 0, 0, 0.5);
   }
   
   @media (max-width: 768px) {
-    max-height: 50vh;
-    border-radius: 16px;
+    max-height: 350px;
+    border-radius: 12px;
   }
 }
 
-/* Feature row cards - improved spacing without images */
+/* Feature row cards - optimized 2-3 column layout */
 .feature__wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  
   .archive__item {
-    margin-bottom: 2rem;
-    padding: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 1.75rem;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     
     &:hover {
       background: rgba(255, 255, 255, 0.08);
       border-color: rgba(0, 255, 0, 0.3);
-      transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
     
     .archive__item-title {
       margin-top: 0;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.4rem;
       font-weight: 700;
+      line-height: 1.3;
     }
     
     .archive__item-excerpt {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       font-size: 1rem;
-      line-height: 1.6;
+      line-height: 1.65;
+      flex-grow: 1;
     }
     
     .btn {
-      margin-top: 1rem;
+      margin-top: auto;
+      align-self: flex-start;
     }
   }
   
-  // Grid layout for cards
-  @media (min-width: 64em) {
-    display: grid;
+  // Responsive grid layout for cards
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  
+  @media (min-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
   
-  @media (min-width: 80em) {
+  @media (min-width: 1400px) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
   }
 }
 
-/* Page content - wider margins for detail pages */
+/* Page content - optimized margins and spacing */
 .page__content {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 3rem 4rem;
+  padding: 2rem 2.5rem;
   
   @media (max-width: 1024px) {
-    padding: 2rem 3rem;
+    padding: 1.75rem 2rem;
   }
   
   @media (max-width: 768px) {
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 1.25rem;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
+  h1 {
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+  
+  h3, h4 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.875rem;
+    line-height: 1.4;
+  }
+  
+  h5, h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
   }
   
   p {
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    line-height: 1.75;
+    font-size: 1.05rem;
   }
   
   ul, ol {
-    margin-bottom: 1.5rem;
-    padding-left: 2rem;
+    margin-bottom: 1.25rem;
+    padding-left: 1.75rem;
     
     li {
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
       line-height: 1.7;
     }
   }
 }
 
-/* Intro section - centered content */
+/* Main content wrapper - ensure proper width utilization */
+.initial-content,
+.page {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Splash layout - full width with good margins */
+.layout--splash {
+  .page__hero {
+    padding: 2rem 1.5rem;
+    
+    @media (min-width: 768px) {
+      padding: 3rem 2rem;
+    }
+  }
+  
+  .page__content {
+    padding: 1.5rem;
+    
+    @media (min-width: 768px) {
+      padding: 2rem 2.5rem;
+    }
+  }
+}
+
+/* Intro section - centered content with good spacing */
 .feature__wrapper--center {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
   
   .archive__item-excerpt {
-    font-size: 1.2rem;
-    line-height: 1.8;
+    font-size: 1.15rem;
+    line-height: 1.75;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Responsive typography improvements */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  .page__hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .page__lead {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    font-size: 17px;
+  }
+  
+  .page__hero-title {
+    font-size: 2.75rem !important;
+  }
+}
+
+/* Button improvements */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  
+  &--primary {
+    background-color: #00ff00;
+    color: #000;
+    
+    &:hover {
+      background-color: #00cc00;
+    }
   }
 }
