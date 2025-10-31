@@ -7,9 +7,9 @@ author_profile: true
 
 <style>
 .motivation-content {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2em 1em;
+  padding: 2.5em 2rem;
 }
 
 .motivation-header {
